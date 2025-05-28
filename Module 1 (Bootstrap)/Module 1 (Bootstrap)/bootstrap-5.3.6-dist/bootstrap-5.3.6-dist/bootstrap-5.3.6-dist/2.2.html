@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap 5 JS Plugins Example</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-primary">Bootstrap 5 with JS Plugins</h1>
+    <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip working!">
+      Hover me!
+    </button>
+  </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS to enable tooltips -->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+
+</body>
+</html>

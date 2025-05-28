@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fixed Footer</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    body {
+      margin-bottom: 60px; /* to avoid footer overlap */
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      z-index: 1030;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Page Content</h2>
+  <p>Scroll down to see the fixed footer at bottom.</p>
+</div>
+
+<footer class="footer position-fixed bottom-0">
+  Fixed Footer - Always visible at bottom
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

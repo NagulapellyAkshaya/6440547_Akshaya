@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Sidebar</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <style>
+    .sidebar {
+      background-color: #343a40;
+      color: white;
+      height: 100vh;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar: hidden on xs, visible on md and above -->
+    <nav class="col-md-3 d-none d-md-block sidebar">
+      <h5>Sidebar</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a href="#" class="nav-link text-white">Dashboard</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">Profile</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">Settings</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main class="col-md-9 ms-sm-auto px-4">
+      <h2>Main Content</h2>
+      <p>This sidebar only appears on tablets (md) and larger screens.</p>
+    </main>
+
+  </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
