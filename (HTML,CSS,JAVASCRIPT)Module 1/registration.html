@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <script src="main.js"></script>
+
+  <meta charset="UTF-8" />
+  <title>Task 5 - Registration Form</title>
+  <style>
+    label { display: block; margin: 10px 0 5px; }
+    input, select, textarea { width: 300px; padding: 5px; }
+    output { margin-left: 10px; font-weight: bold; color: green; }
+  </style>
+</head>
+<body>
+
+<form id="regForm" onsubmit="submitForm(event)">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Your Name" required autofocus />
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Your Email" required />
+  
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date" required />
+  
+  <label for="eventType">Event Type:</label>
+  <select id="eventType" name="eventType">
+    <option>Festival</option>
+    <option>Workshop</option>
+    <option>Concert</option>
+  </select>
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4"></textarea>
+  
+  <br><br>
+  <input type="submit" value="Register" />
+  <output id="confirmation"></output>
+</form>
+
+<script>
+  function submitForm(event) {
+    event.preventDefault();
+    document.getElementById('confirmation').textContent = "Registration successful!";
+    event.target.reset();
+  }
+</script>
+
+</body>
+</html>

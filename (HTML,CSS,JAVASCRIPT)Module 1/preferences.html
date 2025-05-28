@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+   <script src="main.js"></script>
+
+  <meta charset="UTF-8" />
+  <title>Task 8 - User Preferences</title>
+</head>
+<body>
+
+<label for="preferredEvent">Select Preferred Event:</label>
+<select id="preferredEvent" onchange="savePreference()">
+  <option value="Festival">Festival</option>
+  <option value="Workshop">Workshop</option>
+  <option value="Concert">Concert</option>
+</select>
+
+<button onclick="clearPreferences()">Clear Preferences</button>
+
+<script>
+  // Load preference on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const pref = localStorage.getItem('preferredEvent');
+    if(pref) document.getElementById('preferredEvent').value = pref;
+  });
+
+  function savePreference() {
+    const val = document.getElementById('preferredEvent').value;
+    localStorage.setItem('preferredEvent', val);
+  }
+
+  function clearPreferences() {
+    localStorage.clear();
+    sessionStorage.clear();
+    alert('Preferences cleared!');
+  }
+</script>
+
+</body>
+</html>

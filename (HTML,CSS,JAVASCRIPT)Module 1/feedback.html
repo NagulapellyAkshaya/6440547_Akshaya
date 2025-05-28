@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <script src="main.js"></script>
+
+  <meta charset="UTF-8" />
+  <title>Task 6 - Feedback with Events</title>
+  <style>
+    textarea { width: 300px; height: 100px; }
+  </style>
+</head>
+<body>
+
+<label for="phone">Phone Number:</label>
+<input type="text" id="phone" onblur="validatePhone(this)" placeholder="10-digit number" />
+
+<br><br>
+
+<label for="eventSelect">Select Event:</label>
+<select id="eventSelect" onchange="showFee(this)">
+  <option value="Festival">Festival</option>
+  <option value="Workshop">Workshop</option>
+  <option value="Concert">Concert</option>
+</select>
+
+<br><br>
+
+<button id="submitBtn" onclick="confirmSubmission()">Submit Feedback</button>
+
+<br><br>
+
+<img src="images/event1.jpg" alt="Event Image" ondblclick="enlargeImage(this)" width="200" style="cursor:pointer;"/>
+
+<br><br>
+
+<textarea id="feedback" onkeyup="countChars(this)" placeholder="Type feedback here..."></textarea>
+<div id="charCount">0 characters</div>
+
+<script>
+  function validatePhone(input) {
+    const val = input.value.trim();
+    if (val.length !== 10 || isNaN(val)) {
+      alert("Enter a valid 10-digit phone number");
+    }
+  }
+
+  function showFee(sel) {
+    alert(`Fee for ${sel.value} is ₹500`);
+  }
+
+  function confirmSubmission() {
+    alert("Feedback submitted, thank you!");
+  }
+
+  function enlargeImage(img) {
+    img.style.width = "400px";
+    img.style.transition = "width 0.3s ease";
+  }
+
+  function countChars(txtarea) {
+    document.getElementById('charCount').textContent = txtarea.value.length + " characters";
+  }
+</script>
+
+</body>
+</html>

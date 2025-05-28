@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <script src="main.js"></script>
+
+  <meta charset="UTF-8" />
+  <title>Task 7 - Promo Video</title>
+</head>
+<body>
+
+<video width="400" controls oncanplay="videoReady()">
+  <source src="videos/invite.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<script>
+  function videoReady() {
+    alert("Video ready to play!");
+  }
+
+  window.onbeforeunload = function() {
+    return "Are you sure you want to leave? Unsaved changes might be lost.";
+  }
+</script>
+
+</body>
+</html>

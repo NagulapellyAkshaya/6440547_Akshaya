@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <script src="main.js"></script>
+
+
+    <meta charset="UTF-8" />
+  <title>Task 10 - Debugging</title>
+</head>
+<body>
+
+<h1>Debugging Demo</h1>
+<button id="debugBtn">Click me</button>
+
+<script>
+  console.log('Page loaded');
+
+  document.getElementById('debugBtn').addEventListener('click', () => {
+    console.log('Button clicked');
+    let x = 10;
+    let y = 0;
+    debugger; // breakpoint here
+    let z = x / y; // division by zero example
+    console.log('Result:', z);
+  });
+</script>
+
+</body>
+</html>
